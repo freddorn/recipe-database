@@ -1,0 +1,4 @@
+.theia
+__pycache__
+.env    
+.flaskenv
