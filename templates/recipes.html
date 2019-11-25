@@ -1,0 +1,9 @@
+python3{% extends 'base.html' %}
+{% block content %}
+    {% for task in tasks %}
+        {{task.recipe_name}}
+        {{task.category_name}}
+        {{task.ingredients}}
+        {{task.preparation}}
+    {% endfor %}
+{% endblock %}
