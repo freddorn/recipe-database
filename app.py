@@ -6,7 +6,6 @@ from pymongo import MongoClient
 from pymongo import ASCENDING
 from pymongo import DESCENDING
 from pymongo import TEXT
-import bcrypt
 
 app = Flask(__name__)
 
