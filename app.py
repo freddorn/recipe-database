@@ -3,6 +3,10 @@ from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from pymongo import MongoClient
+from pymongo import ASCENDING
+from pymongo import DESCENDING
+from pymongo import TEXT
+import bcrypt
 
 app = Flask(__name__)
 
@@ -15,7 +19,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", tasks=mongo.db.recipes.find())
+    return render_template("all_recipes.html", tasks=mongo.db.recipes.find())
 
 
 if __name__ == '__main__':
