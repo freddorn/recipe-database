@@ -24,15 +24,24 @@ html {
     margin-bottom: 20px;
 }
 
+/*The pre tag ensures that linebreaks are preserved in text pulled from MongoDB. This style ensures that the font matches the rest of the body text and the text wraps automatically*/
+pre {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    white-space: pre-wrap; /*This line ensures that the text in the pre tag wraps automatically*/
+}   
+
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 0rem;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     text-align: inherit;
     margin-bottom: 0.5rem;
 }
@@ -43,12 +52,3 @@ h3 {
     margin-top: 0rem;
     margin-bottom: 0rem;
 }
-
-/*The pre tag ensures that linebreaks are preserved in text pulled from MongoDB. This style ensures that the font matches the rest of the body text and the text wraps automatically*/
-pre {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    white-space: pre-wrap; /*This line ensures that the text in the pre tag wraps automatically*/
-}   
