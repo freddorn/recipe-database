@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for task in tasks %}
-        {{task.recipe_name}}
-        {{task.category_name}}
-        {{task.ingredients}}
-        {{task.preparation}}
+    {% for recipe in recipes %}
+        {{recipe.category_name}}
     {% endfor %}
 {% endblock %}
