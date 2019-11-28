@@ -1,3 +1,11 @@
+html {
+    font-weight: 400;
+    font-size: 100%;
+    background: url("../images/background.jpg") no-repeat center fixed; 
+    background-size: cover;
+    overflow: scroll;
+    }
+
 .nav-wrapper {
     background-color: #00583d
 }
@@ -6,12 +14,41 @@
     background-color: #6f4e37
 }
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+.category {
+    text-align: center;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+.category-image {
+    width: 100px;
+    border:1px solid black;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: inherit;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+/*The pre tag ensures that linebreaks are preserved in text pulled from MongoDB. This style ensures that the font matches the rest of the body text and the text wraps automatically*/
+pre {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    white-space: pre-wrap; /*This line ensures that the text in the pre tag wraps automatically*/
+}   

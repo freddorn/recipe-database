@@ -1,6 +1,26 @@
-{% extends 'base.html' %}
-{% block content %}
-    {% for recipe in recipes %}
-        {{recipe.category_name}}
-    {% endfor %}
+{% extends 'base.html'%} {% block content %}
+    
+
+        {% if count==1 %}
+        <h1> 1 Recipe</h1>
+        {% else %}
+        <h1>{{ count }} Recipes</h1>
+        {% endif %}
+
+
+
+
+	
+
+		<!--Loop through recipes in the database-->
+		{% for recipe in recipes %}
+
+        <h2> {{ recipe.recipe_name }}</h2> 
+
+		<h3>Category: {{ recipe.category_name }}</h3>
+    
+
+
+{% endfor %}
+
 {% endblock %}
