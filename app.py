@@ -14,6 +14,9 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 
+mongo.db.recipes.create_index([('$**', 'text')])
+mongo.db.users.create_index([('$**', 'text')])
+
 
 @app.route('/')
 @app.route('/get_recipes')
