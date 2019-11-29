@@ -50,17 +50,3 @@ h3 {
     margin-top: 0rem;
     margin-bottom: 0rem;
 }
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-  .page-footer {
-      background-color: #6f4e37
-  }
