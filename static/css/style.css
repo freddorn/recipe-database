@@ -53,18 +53,14 @@ h3 {
 
 /*Media Queries*/
 
-@media only screen and (min-width: 500px) {
-    .category-image {
-        width: 180px;
-        }
-        
-    h1 {
-        font-size: 2.5rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        }
-    
-    h2 {
-        font-size: 1.5rem;
-        margin-top: 1.5rem;
-        }
+@media screen and (max-width: 992px) {
+  h1 {
+     font-size: 3rem;
+  }
+  h2 {
+      font-size: 2.75rem; 
+  }
+  h3 {
+      font-size: 2rem;
+  }
+}   
