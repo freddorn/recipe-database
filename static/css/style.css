@@ -12,8 +12,7 @@ html {
 
 .nav-wrapper {
     background-color: #00583d;
-}
-
+    height: 100px;
 }
 
 .category {
@@ -58,6 +57,15 @@ h3 {
     text-align: center;
 }
 
+.material-icons {
+    font-size: 6rem !important;
+}
+
+#nav-mobile {
+    font-size: 4rem !important;
+}
+
+
 .brand-logo {
     font-family: "Asset", cursive;
     font-size: 3rem !important; 
@@ -68,7 +76,7 @@ h3 {
 
 /*Media Queries*/
 
-@media screen and (max-width: 992px) {
+/*@media screen and (max-width: 992px) {
   h1 {
      font-size: 7rem;
   }
