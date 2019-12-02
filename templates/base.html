@@ -11,41 +11,44 @@
 
 <body>
 	<header>
-		<nav>
-			<div class="nav-wrapper">
-				<a href="#!" class="brand-logo">RDB</a>
-				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="">Home</a></li>
-					<li><a href="">Categories</a></li>
-					{% if session.username %}
-					<!--If the user is logged in, they see links to add recipes, view their own recipes and log out in the navbar-->
-					<li><a href="">Add a Recipe</a></li>
-					<li><a href="">Your Recipes</a></li>
-					<li><a href="">Log Out</a></li>
-					{% else %}
-					<!--If the user is not logged in, they see links to log in or register in the navbar-->
-					<li><a href="">Log In</a></li>
-					<li><a href="">Register</a></li>
-					{% endif %}
-				</ul>
+		<div class="navbar-fixed">
+			<!--This ensures that the navbar remains visible when the user scrolls down the page-->
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#!" class="brand-logo">RDB</a>
+					<a href="#" data-activates="mobile-demo"
+						class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="">Home</a></li>
+						<li><a href="">Categories</a></li>
+						{% if session.username %}
+						<!--If the user is logged in, they see links to add recipes, view their own recipes and log out in the navbar-->
+						<li><a href="">Add a Recipe</a></li>
+						<li><a href="">Your Recipes</a></li>
+						<li><a href="">Log Out</a></li>
+						{% else %}
+						<!--If the user is not logged in, they see links to log in or register in the navbar-->
+						<li><a href="">Log In</a></li>
+						<li><a href="">Register</a></li>
+						{% endif %}
+					</ul>
 
-				<!--Side nav for mobile devices-->
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="">Home</a></li>
-					<li><a href="">Categories</a></li>
-					{% if session.username %}
-					<li><a href="">Add a Recipe</a></li>
-					<li><a href="">Your Recipes</a></li>
-					<li><a href="">Log Out</a></li>
-					{% else %}
-					<li><a href="">Log In</a></li>
-					<li><a href="">Register</a></li>
-					{% endif %}
-				</ul>
-			</div>
-		</nav>
-
+					<!--Side nav for mobile devices-->
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="">Home</a></li>
+						<li><a href="">Categories</a></li>
+						{% if session.username %}
+						<li><a href="">Add a Recipe</a></li>
+						<li><a href="">Your Recipes</a></li>
+						<li><a href="">Log Out</a></li>
+						{% else %}
+						<li><a href="">Log In</a></li>
+						<li><a href="">Register</a></li>
+						{% endif %}
+					</ul>
+				</div>
+			</nav>
+		</div>
 	</header>
 	<div class="container">
 		{% block content %} {% endblock %}

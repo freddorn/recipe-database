@@ -7,7 +7,7 @@ html {
     }
 
 .nav-wrapper {
-    background-color: #00583d
+    background-color: #00583d;
 }
 
 }
@@ -15,7 +15,6 @@ html {
 .category {
     text-align: center;
 }
-
 .category-image {
     width: 100px;
     border:1px solid black;
@@ -54,6 +53,13 @@ h3 {
 .container {
     text-align: center;
 }
+
+.brand-logo {
+    
+    font-size: 4rem !important; 
+    margin-left: 1rem;
+}
+
 
 /*Media Queries*/
 
