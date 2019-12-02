@@ -76,7 +76,7 @@ h3 {
 
 /*Media Queries*/
 
-/*@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   h1 {
      font-size: 7rem;
   }
