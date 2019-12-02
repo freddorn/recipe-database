@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Asset:400,600');
+
+
 html {
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 100%;
     background: url("../images/background.jpg") no-repeat center fixed; 
@@ -55,9 +59,10 @@ h3 {
 }
 
 .brand-logo {
-    
-    font-size: 4rem !important; 
+    font-family: "Asset", cursive;
+    font-size: 3rem !important; 
     margin-left: 1rem;
+    height: 100px;
 }
 
 
