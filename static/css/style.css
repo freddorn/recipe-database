@@ -12,7 +12,6 @@ html {
 
 .nav-wrapper {
     background-color: #00583d;
-    height: 100px;
 }
 
 .category {
@@ -60,11 +59,6 @@ h3 {
 .material-icons {
     font-size: 6rem !important;
 }
-
-#nav-mobile {
-    font-size: 4rem !important;
-}
-
 
 .brand-logo {
     font-family: "Asset", cursive;
