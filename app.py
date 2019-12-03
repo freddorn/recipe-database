@@ -43,6 +43,17 @@ def all_recipes_by_cat(category_name):
                            recipes=results, count=results.count())
 
 
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    """Search for a recipe by keywords"""
+
+    keywords = request.form.get('search')
+    query = ({'$text': {'$search': keywords}})
+    results = mongo.db.recipes.find(query)
+    return render_template('all_recipes.html',
+                           recipes=results, count=results.count())
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

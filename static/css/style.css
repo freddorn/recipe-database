@@ -38,6 +38,24 @@ nav {
     background-color: #00583d;
 }
 
+.search-wrapper {
+    background-color: #007699
+}
+
+#search {
+    vertical-align: middle;
+}
+
+.label-icon {
+    margin-left: 10px;
+}
+
+::placeholder {
+    font-size: 1rem;
+    color: #ffffff;
+    padding-left: 0.5rem;
+}
+
 .container {
     background-color: rgba(255, 248, 225, .8);
     height: auto;
