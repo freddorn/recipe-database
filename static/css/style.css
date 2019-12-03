@@ -1,5 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Asset:400,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Asset:100,200,300,400,500,600,700');
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p,
+ol {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
 
 html {
     font-family: "Roboto", sans-serif;
@@ -30,7 +46,7 @@ pre {
     font-weight: inherit;
     line-height: inherit;
     white-space: pre-wrap; /*This line ensures that the text in the pre tag wraps automatically*/
-}   
+}  
 
 h1 {
     font-size: 3rem;
