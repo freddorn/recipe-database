@@ -14,7 +14,7 @@ h8 {
 p,
 ol {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 html {
@@ -26,8 +26,24 @@ html {
     overflow: scroll;
     }
 
+nav {
+    line-height: 100px;
+}
+
+#main-nav {
+    height: 100px;
+}
+ 
+
 .nav-wrapper {
     background-color: #00583d;
+}
+
+.container {
+    background-color: rgba(255, 248, 225, .8);
+    height: auto;
+    padding: 50px;
+    margin-top: 50px;
 }
 
 .category {
