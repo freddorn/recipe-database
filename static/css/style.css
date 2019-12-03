@@ -11,8 +11,7 @@ h8 {
   font-family: 'Roboto', sans-serif;
 }
 
-p,
-ol {
+p {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 }
@@ -89,7 +88,7 @@ h3 {
 }
 
 .material-icons {
-    font-size: 6rem !important;
+    font-size: 4rem !important;
 }
 
 .brand-logo {
@@ -110,6 +109,9 @@ h3 {
       font-size: 4rem; 
   }
   h3 {
+      font-size: 3rem;
+  }
+  p {
       font-size: 3rem;
   }
 } 
