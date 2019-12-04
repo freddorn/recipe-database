@@ -26,7 +26,7 @@ html {
     }
 
 nav {
-    line-height: 100px;
+    line-height: 50px;
 }
 
 #main-nav {
@@ -39,7 +39,7 @@ nav {
 }
 
 .search-wrapper {
-    background-color: #007699
+    background-color: #00583d;
 }
 
 #search {
@@ -131,5 +131,8 @@ h3 {
   }
   p {
       font-size: 3rem;
+  }
+  nav {
+      line-height: 100px;
   }
 } 
