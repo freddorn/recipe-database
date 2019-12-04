@@ -15,12 +15,12 @@
 			<!--This ensures that the navbar remains visible when the user scrolls down the page-->
 			<nav>
 				<div class="nav-wrapper" id="main-nav">
-					<a href="#!" class="brand-logo">RDB</a>
+					<a href="{{url_for('all_recipes')}}" class="brand-logo">RDB</a>
 					<a href="#" data-activates="mobile-demo"
 						class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a href="">Home</a></li>
-						<li><a href="">Categories</a></li>
+						<li><a href="{{url_for('all_recipes')}}">Home</a></li>
+						<li><a href="{{url_for('categories')}}">Categories</a></li>
 						{% if session.username %}
 						<!--If the user is logged in, they see links to add recipes, view their own recipes and log out in the navbar-->
 						<li><a href="">Add a Recipe</a></li>
@@ -35,8 +35,8 @@
 
 					<!--Side nav for mobile devices-->
 					<ul class="side-nav" id="mobile-demo">
-						<li><a href="">Home</a></li>
-						<li><a href="">Categories</a></li>
+						<li><a href="{{url_for('all_recipes')}}">Home</a></li>
+						<li><a href="{{url_for('categories')}}">Categories</a></li>
 						{% if session.username %}
 						<li><a href="">Add a Recipe</a></li>
 						<li><a href="">Your Recipes</a></li>

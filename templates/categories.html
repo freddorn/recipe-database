@@ -1,0 +1,67 @@
+{% extends 'base.html'%} {% block content %}
+
+<!--Images that users can click on to view recipes in each category-->
+
+
+<div class="row">
+
+	<h1>Browse Recipes by Category</h1>
+
+	<div class="col s6 xl4 category">
+		<h2>Breads-rolls</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Breads-rolls")}}">
+			<img class="category-image" src="../static/images/bread.jpg" title="Bread" alt="Bread"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Salad</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Salad")}}">
+			<img class="category-image" src="../static/images/salad.jpg" title="Salad" alt="Salad"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Soup</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Soup")}}">
+			<img class="category-image" src="../static/images/soup.jpg" title="Soup" alt="Soup"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Appetizers</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Appetizers")}}">
+			<img class="category-image" src="../static/images/appetizers.jpg" title="Appetizers" alt="Appetizers"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Main Dishes</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Main Dishes")}}">
+			<img class="category-image" src="../static/images/main_dishes.jpg" title="Main Dishes" alt="Main Dishes"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Sides</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Sides")}}">
+			<img class="category-image" src="../static/images/sides.jpg" title="Sides" alt="Sides"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Desserts</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Desserts")}}">
+			<img class="category-image" src="../static/images/dessert.jpg" title="Dessert" alt="Dessert"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Breakfast</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Breakfast")}}">
+			<img class="category-image" src="../static/images/breakfast.jpg" title="Breakfast" alt="Breakfast"></a>
+	</div>
+
+	<div class="col s6 xl4 category">
+		<h2>Lunch</h2>
+		<a href="{{url_for('all_recipes_by_cat', category_name="Lunch")}}">
+			<img class="category-image" src="../static/images/lunch.jpg" title="Lunch" alt="Lunch"></a>
+	</div>
+
+</div>
+
+
+{% endblock %}

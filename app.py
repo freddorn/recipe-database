@@ -54,6 +54,11 @@ def search():
                            recipes=results, count=results.count())
 
 
+@app.route('/categories', methods=['GET', 'POST'])
+def categories():
+    return render_template('categories.html')
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
