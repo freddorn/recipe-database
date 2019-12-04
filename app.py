@@ -1,11 +1,12 @@
 import os
-from flask import Flask, render_template, redirect, request, session, url_for
+from flask import Flask, render_template, redirect, request, session, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from pymongo import MongoClient
 from pymongo import ASCENDING
 from pymongo import DESCENDING
 from pymongo import TEXT
+import bcrypt
 
 
 app = Flask(__name__)
@@ -57,6 +58,55 @@ def search():
 @app.route('/categories', methods=['GET', 'POST'])
 def categories():
     return render_template('categories.html')
+
+# The register and login routes are based on code by Pretty Printed: https://github.com/PrettyPrinted/mongodb-user-login/blob/master/login_example.py
+
+
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    """Allow new users to register"""
+
+    if request.method == 'POST':
+        users = mongo.db.users
+        existing_user = users.find_one({'username': request.form['username']})
+
+        if existing_user is None:
+            # If there is no existing user with that username, encrypt the new user's password
+            pw_hash = bcrypt.hashpw(
+                request.form['password'].encode('utf-8'), bcrypt.gensalt())
+            # Decode the hashed password while keeping it encrypted so it can be stored in the MongoDB database
+            db_password = pw_hash.decode("utf-8")
+            # Add the username and encrypted password to the database
+            users.insert(
+                {'username': request.form['username'], 'password': db_password})
+            # The newly registered user is logged in
+            session['username'] = request.form['username']
+            return redirect(url_for('index'))
+
+        # The user sees this message if their chosen password is already in the database
+        flash('That username is taken. Please try a different one.')
+
+    return render_template('register.html')
+
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    """Allow registered user to log in"""
+
+    if request.method == 'POST':
+        users = mongo.db.users
+        login_user = users.find_one({'username': request.form['username']})
+
+        if login_user:
+            # If the username is in the database, hash the password entered in the form and compare it with the hashed password in the database for that user
+            if bcrypt.hashpw(request.form['password'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+                session['username'] = request.form['username']
+                return redirect(url_for('index'))
+
+        # The user sees this message if the username and/or password are invalid
+        flash('Invalid username/password combination.')
+
+    return render_template('login.html')
 
 
 if __name__ == '__main__':

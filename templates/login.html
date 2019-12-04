@@ -1,0 +1,46 @@
+{% extends 'base.html'%} {% block content %}
+
+<h1>Please Log In</h1>
+
+
+<div class="row">
+
+	<form class="col s12 l6 offset-l3" method=POST action="{{ url_for('login') }}">
+
+		<p>You need to be logged in to add, edit or delete recipes. If you don't already have an account, you can <a
+				href="{{url_for('register')}}">register here</a>.</p>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input name="username" type="text" class="validate">
+				<label>Username</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input name="password" type="password" class="validate">
+				<label>Password</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<button type="submit" name="action" class="btn waves-effect waves-light">Log In
+                    <i class="material-icons right">exit_to_app</i>
+                </button>
+		</div>
+
+		<!--If there are any issues with login, the user is notified here-->
+		<div class="row">
+			{% with messages = get_flashed_messages() %} {% if messages %}
+			{% for message in messages %}
+			<p id="flash">{{ message }}</p>
+			{% endfor %}
+			{% endif %} {% endwith %}
+		</div>
+
+	</form>
+
+</div>
+
+{% endblock %}

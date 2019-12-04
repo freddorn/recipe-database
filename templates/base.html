@@ -28,8 +28,8 @@
 						<li><a href="">Log Out</a></li>
 						{% else %}
 						<!--If the user is not logged in, they see links to log in or register in the navbar-->
-						<li><a href="">Log In</a></li>
-						<li><a href="">Register</a></li>
+						<li><a href="{{url_for('login')}}">Log In</a></li>
+						<li><a href="{{url_for('register')}}">Register</a></li>
 						{% endif %}
 					</ul>
 
@@ -42,8 +42,8 @@
 						<li><a href="">Your Recipes</a></li>
 						<li><a href="">Log Out</a></li>
 						{% else %}
-						<li><a href="">Log In</a></li>
-						<li><a href="">Register</a></li>
+						<li><a href="{{url_for('login')}}">Log In</a></li>
+						<li><a href="{{url_for('register')}}">Register</a></li>
 						{% endif %}
 					</ul>
 				</div>
@@ -62,11 +62,6 @@
 		{% block content %} {% endblock %}
 	</div>
 
-        <footer class="page-footer">
-            <div class="info-footer">
-            Discover many tasty menu items
-            </div>
-        </footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
