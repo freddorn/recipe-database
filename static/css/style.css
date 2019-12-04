@@ -121,6 +121,11 @@ h3 {
     height: 100px;
 }
 
+.page-footer {
+    text-align: center;
+    background-color: #00583d;
+}
+
 
 /*Media Queries*/
 
