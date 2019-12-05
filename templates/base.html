@@ -27,7 +27,7 @@
 						<!--If the user is logged in, they see links to add recipes, view their own recipes and log out in the navbar-->
 						<li><a href="">Add a Recipe</a></li>
 						<li><a href="">Your Recipes</a></li>
-						<li><a href="">Log Out</a></li>
+						<li><a href="{{url_for('logout')}}">Log Out</a></li>
 						{% else %}
 						<!--If the user is not logged in, they see links to log in or register in the navbar-->
 						<li><a href="{{url_for('login')}}">Log In</a></li>
@@ -42,7 +42,7 @@
 						{% if session.username %}
 						<li><a href="">Add a Recipe</a></li>
 						<li><a href="">Your Recipes</a></li>
-						<li><a href="">Log Out</a></li>
+						<li><a href="{{url_for('logout')}}">Log Out</a></li>
 						{% else %}
 						<li><a href="{{url_for('login')}}">Log In</a></li>
 						<li><a href="{{url_for('register')}}">Register</a></li>

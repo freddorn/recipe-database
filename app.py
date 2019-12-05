@@ -10,7 +10,7 @@ import bcrypt
 
 
 app = Flask(__name__)
-app.secret_key = 123456
+app.secret_key = 'h2oisg00d'
 
 app.config['MONGO_DBNAME'] = 'recipedb'
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI', 'mongodb://localhost')
@@ -82,7 +82,7 @@ def register():
                 {'username': request.form['username'], 'password': db_password})
             # The newly registered user is logged in
             session['username'] = request.form['username']
-            return redirect(url_for('index'))
+            return redirect(url_for('all_recipes'))
 
         # The user sees this message if their chosen password is already in the database
         flash('That username is taken. Please try a different one.')
@@ -102,12 +102,18 @@ def login():
             # If the username is in the database, hash the password entered in the form and compare it with the hashed password in the database for that user
             if bcrypt.hashpw(request.form['password'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
                 session['username'] = request.form['username']
-                return redirect(url_for('index'))
+                return redirect(url_for('all_recipes'))
 
         # The user sees this message if the username and/or password are invalid
         flash('Invalid username/password combination.')
 
     return render_template('login.html')
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for('all_recipes'))
 
 
 if __name__ == '__main__':
