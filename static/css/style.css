@@ -77,14 +77,20 @@ nav {
     margin-bottom: 20px;
 }
 
-/*The pre tag ensures that linebreaks are preserved in text pulled from MongoDB. This style ensures that the font matches the rest of the body text and the text wraps automatically*/
+/*Allows line breaks to inherit from Mongodb*/
 pre {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
-    white-space: pre-wrap; /*This line ensures that the text in the pre tag wraps automatically*/
-}  
+    white-space: pre-wrap; 
+} 
+
+a.recipe-name:hover {
+    color: #ff4040;
+    text-decoration: underline;
+}
+  
 
 h1 {
     font-size: 3rem;

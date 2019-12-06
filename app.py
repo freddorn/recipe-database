@@ -116,6 +116,15 @@ def logout():
     return redirect(url_for('all_recipes'))
 
 
+@app.route('/view_recipe/<recipe_id>', methods=['GET', 'POST'])
+def view_recipe(recipe_id):
+    """ Display a recipe, including ingredients ad preparation"""
+
+    the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    return render_template(
+        'view_recipe.html', recipe=the_recipe)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
