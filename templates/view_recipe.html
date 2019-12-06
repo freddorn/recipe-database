@@ -1,0 +1,72 @@
+{% extends 'base.html'%} {% block content %}
+
+<h1>{{recipe.recipe_name}}</h1>
+
+<div class="row">
+
+	<div class="col s12 m6 xl4">
+
+
+		<!--Information about the recipe-->
+		<div id="information">
+
+			<!--The username of the person who added the recipe to the database-->
+			Submitted by {{recipe.username}}<br>
+
+        </div>
+
+			<div class="row">
+
+				<!--If the Delete button is clicked, a warning appears-->
+				{% with messages = get_flashed_messages() %} {% if messages %}
+
+				{% for message in messages %}
+
+				<p id="flash">{{ message }} </p>
+
+				<!--Clicking this button cancels the deletion-->
+				<a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" class="btn waves-effect waves-light">
+					<i class="material-icons right">cancel</i>Cancel</a>
+
+				<!--Clicking this button confirms the deletion-->
+				<a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn waves-effect waves-light">
+					<i class="material-icons right">check_circle</i>Confirm</a>
+
+				{% endfor %}
+
+				<!--Only the user who submitted the recipe can see the Edit and Delete buttons-->
+				{% elif session.username == recipe.username %}
+
+				<!--Button to edit a recipe-->
+				<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn waves-effect waves-light">
+					<i class="material-icons right">edit</i>Edit</a>
+
+				<!--Button to delete a recipe-->
+				<a href="{{url_for('warning', recipe_id=recipe._id)}}" class="btn waves-effect waves-light">
+					<i class="material-icons right">delete</i>Delete</a>
+
+				{% endif %} {% endwith %}
+
+			</div>
+
+
+		</div>
+
+        <!--Ingredients-->
+		<div class="col s12 m6 xl3" id="ingredients">
+			<h2>Ingredients</h2>
+			<pre>{{recipe.ingredients}}</pre>
+			<!--The pre tag preserves the line breaks in the text from MongoDB-->
+		</div>
+
+		<!--Preparation instructions-->
+		<div class="col s12 xl5" id="preparation">
+			<h2>Preparation</h2>
+			<pre>{{recipe.preparation}}</pre>
+			<!--The pre tag preserves the line breaks in the text from MongoDB-->
+		</div>
+
+	</div>
+
+
+	{% endblock %}
