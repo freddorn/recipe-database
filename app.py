@@ -186,6 +186,34 @@ def insert_recipe():
         'view_recipe.html', recipe=new_recipe)
 
 
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    """Load a form to edit a recipe"""
+
+    the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template(
+        'edit_recipe.html', recipe=the_recipe, categories=all_categories)
+
+
+@app.route('/submit_changes/<recipe_id>', methods=['POST'])
+def submit_changes(recipe_id):
+    """Submit changes after editing"""
+
+    mongo.db.recipes.update(
+        {'_id': ObjectId(recipe_id)},
+        {
+            'recipe_name': request.form.get('recipe_name'),
+            'category_name': request.form.get('category_name'),
+            'ingredients': request.form.get('ingredients'),
+            'preparation': request.form.get('preparation'),
+            'username': session['username']
+        })
+    the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    return render_template(
+        'view_recipe.html', recipe=the_recipe)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
