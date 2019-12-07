@@ -125,6 +125,17 @@ def view_recipe(recipe_id):
         'view_recipe.html', recipe=the_recipe)
 
 
+@app.route('/user_recipes')
+def user_recipes():
+    """A page listing the logged-in user's own recipes"""
+
+    user = session['username']
+    query = ({'username': user})
+    results = mongo.db.recipes.find(query).sort('recipe_name', 1)
+    return render_template('all_recipes.html',
+                           recipes=results, count=results.count())
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

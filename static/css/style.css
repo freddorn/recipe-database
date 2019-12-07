@@ -77,7 +77,6 @@ nav {
     margin-bottom: 20px;
 }
 
-/*Allows line breaks to inherit from Mongodb*/
 pre {
     font-family: inherit;
     font-size: inherit;
