@@ -136,6 +136,24 @@ def user_recipes():
                            recipes=results, count=results.count())
 
 
+@app.route('/warning/<recipe_id>', methods=['GET', 'POST'])
+def warning(recipe_id):
+    """Display a warning when a user clicks the Delete button"""
+
+    the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    flash('This will permanently delete the recipe. Are you sure?')
+    return render_template(
+        'view_recipe.html', recipe=the_recipe)
+
+
+@app.route('/delete_recipe/<recipe_id>', methods=['GET', 'POST'])
+def delete_recipe(recipe_id):
+    """Delete a recipe when the user clicks the Confirm button"""
+
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('all_recipes'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
