@@ -83,7 +83,7 @@ pre {
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
-    white-space: pre-wrap; 
+    white-space: normal;
 } 
 
 a.recipe-name:hover {
