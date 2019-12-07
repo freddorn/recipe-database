@@ -196,7 +196,7 @@ def edit_recipe(recipe_id):
         'edit_recipe.html', recipe=the_recipe, categories=all_categories)
 
 
-@app.route('/submit_changes/<recipe_id>', methods=['POST'])
+@app.route('/submit_changes/<recipe_id>', methods=['GET', 'POST'])
 def submit_changes(recipe_id):
     """Submit changes after editing"""
 
