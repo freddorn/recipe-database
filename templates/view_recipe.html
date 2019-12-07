@@ -3,21 +3,32 @@
 <h1>{{recipe.recipe_name}}</h1>
 
 <div class="row">
-
-	<div class="col s12 m6 xl4">
-
-
+	<div class="col s12 x14">
 		<!--Information about the recipe-->
 		<div id="information">
 
 			<!--The username of the person who added the recipe to the database-->
-			Submitted by {{recipe.username}}<br>
+			Submitted by {{recipe.username}}
+		</div>
+	</div>
 
+	<div class="row">
+		<div class="col s12 x14">
+			<h2>Ingredients</h2>
+			<pre>{{recipe.ingredients}}</pre>
+		</div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 x14">
+            <h2>Preparation</h2>
+			<pre>{{recipe.preparation}}</pre>
         </div>
+    </div>
 
-			<div class="row">
-
-				<!--If the Delete button is clicked, a warning appears-->
+    <div class="row>">
+        <div class="col s12 x14">
+            <!--If the Delete button is clicked, a warning appears-->
 				{% with messages = get_flashed_messages() %} {% if messages %}
 
 				{% for message in messages %}
@@ -46,27 +57,6 @@
 					<i class="material-icons right">delete</i>Delete</a>
 
 				{% endif %} {% endwith %}
-
-			</div>
-
-
-		</div>
-
-        <!--Ingredients-->
-		<div class="col s12 m6 xl3" id="ingredients">
-			<h2>Ingredients</h2>
-			<pre>{{recipe.ingredients}}</pre>
-			<!--The pre tag preserves the line breaks in the text from MongoDB-->
-		</div>
-
-		<!--Preparation instructions-->
-		<div class="col s12 xl5" id="preparation">
-			<h2>Preparation</h2>
-			<pre>{{recipe.preparation}}</pre>
-			<!--The pre tag preserves the line breaks in the text from MongoDB-->
-		</div>
-
-	</div>
-
-
+        </div>
+    </div>
 	{% endblock %}
