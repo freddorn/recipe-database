@@ -111,6 +111,11 @@ h3 {
     margin-bottom: 0rem;
 }
 
+#login-text {
+    text-align: center;
+    font-weight: 600;
+}
+
 .container {
     text-align: center;
 }
