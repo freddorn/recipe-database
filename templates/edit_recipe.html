@@ -1,0 +1,69 @@
+{% extends 'base.html'%} {% block content %}
+
+<h1>Edit {{recipe.recipe_name}}</h1>
+    
+<p>Fields marked with an asterisk are required</p>
+    
+<form action="{{ url_for('submit_changes', recipe_id=recipe._id) }}" method="POST" class="col s12">
+                    
+    <!--The recipe's name and category-->
+    <div class="row">
+                        
+        <!--The recipe's name-->
+        <div class="input-field col s12 l6 xl6">
+            <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" required>
+            <label for="recipe_name">Recipe Name*</label>
+        </div>
+    </div> 
+   
+    <div class="row"> 
+    
+        <!--The recipe's category-->
+        <div class="input-field col s12 l6 xl3">
+            <select id="category" name="category_name">
+                <option value="" disabled>Click to Select</option>
+                {% for cat in categories %}
+                    <option value="{{cat.category_name}}"
+                        {% if cat.category_name == recipe.category_name %} selected {% endif %}
+                        >{{cat.category_name}}</option>
+                {% endfor %}
+            </select>
+            <label>Category</label>
+        </div>
+    </div> 
+
+                    
+    <!--Input field for the ingredients-->
+    <div class="row">
+        <div class="input-field col s12">
+            <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>{{recipe.ingredients}}</textarea>
+            <label for="ingredients">Ingredients*</label>
+        </div>
+    </div> 
+                    
+    <!--Input field for preparation-->
+    <div class="row">
+        <div class="input-field col s12">
+            <textarea id="preparation" name="preparation" class="materialize-textarea" required>{{recipe.method}}</textarea>
+            <label for="preparation">Preparation*</label>
+        </div>
+    </div> 
+
+                    
+    <!--Buttons to submit or cancel the changes-->
+    <div class="row">
+                        
+        <!--Button to submit the changes-->
+        <button class="btn waves-effect waves-light" type="submit" name="action">Save
+            <i class="material-icons right">save</i>
+        </button>
+                        
+        <!--Button to cancel the changes and go back to the recipe display page-->
+        <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" class="btn waves-effect waves-light">
+            <i class="material-icons right">close</i>Cancel</a>
+                    
+    </div>  
+
+</form>  
+                
+{% endblock %}
