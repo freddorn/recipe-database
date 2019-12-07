@@ -2,10 +2,6 @@ import os
 from flask import Flask, render_template, redirect, request, session, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from pymongo import MongoClient
-from pymongo import ASCENDING
-from pymongo import DESCENDING
-from pymongo import TEXT
 import bcrypt
 
 
@@ -192,8 +188,7 @@ def edit_recipe(recipe_id):
 
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
-    return render_template(
-        'edit_recipe.html', recipe=the_recipe, categories=all_categories)
+    return render_template('edit_recipe.html', recipe=the_recipe, categories=all_categories)
 
 
 @app.route('/submit_changes/<recipe_id>', methods=['GET', 'POST'])
