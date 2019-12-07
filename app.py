@@ -154,6 +154,38 @@ def delete_recipe(recipe_id):
     return redirect(url_for('all_recipes'))
 
 
+@app.route('/add_recipe')
+def add_recipe():
+    """Load a form for logged-in users to add a new recipe to the database"""
+
+    # The if-else prevents users from submitting recipes when not logged in
+    if session:
+        return render_template(
+            'add_recipe.html', categories=mongo.db.categories.find(),
+            allergens=mongo.db.allergens.find().sort('allergen_name', 1),
+            restrictions=mongo.db.restrictions.find().sort('restriction_name', 1))
+
+    else:
+        return redirect(url_for('login'))
+
+
+@app.route('/insert_recipe', methods=['GET', 'POST'])
+def insert_recipe():
+    """Post a new recipe to the database and display it after filling in the form"""
+
+    recipes = mongo.db.recipes
+    new_recipe = {
+        'recipe_name': request.form.get('recipe_name'),
+        'category_name': request.form.get('category_name'),
+        'ingredients': request.form.get('ingredients'),
+        'preparation': request.form.get('preparation'),
+        'username': session['username']
+    }
+    recipes.insert_one(new_recipe)
+    return render_template(
+        'view_recipe.html', recipe=new_recipe)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

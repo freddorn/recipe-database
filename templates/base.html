@@ -24,7 +24,7 @@
 						<li><a href="{{url_for('categories')}}">Categories</a></li>
 						{% if session.username %}
 						<!--If the user is logged in, they see links to add recipes, view their own recipes and log out in the navbar-->
-						<li><a href="">Add a Recipe</a></li>
+						<li><a href="{{url_for('add_recipe')}}">Add a Recipe</a></li>
 						<li><a href="{{url_for('user_recipes')}}">Your Recipes</a></li>
 						<li><a href="{{url_for('logout')}}">Log Out</a></li>
 						{% else %}
@@ -39,7 +39,7 @@
 						<li><a href="{{url_for('all_recipes')}}">Home</a></li>
 						<li><a href="{{url_for('categories')}}">Categories</a></li>
 						{% if session.username %}
-						<li><a href="">Add a Recipe</a></li>
+						<li><a href="{{url_for('add_recipe')}}">Add a Recipe</a></li>
 						<li><a href="{{url_for('user_recipes')}}">Your Recipes</a></li>
 						<li><a href="{{url_for('logout')}}">Log Out</a></li>
 						{% else %}
