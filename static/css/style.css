@@ -23,7 +23,12 @@ html {
     background: url("../images/background.jpg") no-repeat center fixed; 
     background-size: cover;
     overflow: scroll;
+    height: 100%;
     }
+
+body {
+    height: 100%;
+}
 
 nav {
     line-height: 50px;
