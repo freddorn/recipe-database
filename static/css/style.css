@@ -120,6 +120,10 @@ h3 {
     text-align: center;
 }
 
+.material-icons {
+    font-size: 4rem !important;
+}
+
 .brand-logo {
     font-family: "Asset", cursive;
     font-size: 3rem !important; 
