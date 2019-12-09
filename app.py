@@ -8,7 +8,7 @@ import bcrypt
 app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'recipedb'
-app.secret_key = 'obeolhcanel'
+app.secret_key = os.getenv("SECRET_KEY")
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 
