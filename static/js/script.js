@@ -1,0 +1,6 @@
+$(document).ready(function () {
+    $('.collapsible').collapsible();
+    $('select').material_select();
+    $(".button-collapse").sideNav();
+    $('.materialize-textarea').trigger('autoresize');
+});
