@@ -6,10 +6,11 @@ import bcrypt
 
 
 app = Flask(__name__)
-app.secret_key = 'h2oisg00d'
 
 app.config['MONGO_DBNAME'] = 'recipedb'
-app.config["MONGO_URI"] = os.environ.get('MONGO_URI', 'mongodb://localhost')
+app.secret_key = 'obeolhcanel'
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+
 
 mongo = PyMongo(app)
 recipes = mongo.db.recipes
