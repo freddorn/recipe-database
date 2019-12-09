@@ -6,7 +6,7 @@ import bcrypt
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET")
+app.secret_key = 'h2oisg00d'
 
 app.config['MONGO_DBNAME'] = 'recipedb'
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI', 'mongodb://localhost')
@@ -212,4 +212,4 @@ def submit_changes(recipe_id):
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=False)
