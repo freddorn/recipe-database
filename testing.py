@@ -1,4 +1,6 @@
-# Used this video for test setup: https://www.youtube.com/watch?v=1aHNs1aEATg&list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM&index=8&t=0s
+""" Used this video for test setup: 
+https://www.youtube.com/watch?v=1aHNs1aEATg&list=PLLjmbh6XPGK4ISY747FUHXEl9lBxre4mM&index=8&t=0s"""
+
 from app import app
 import unittest
 

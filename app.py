@@ -57,7 +57,9 @@ def search():
 def categories():
     return render_template('categories.html')
 
-# The register and login routes are based on code by Pretty Printed: https://github.com/PrettyPrinted/mongodb-user-login/blob/master/login_example.py
+
+""" The register and login code was inspired by Pretty Printed
+https://github.com/PrettyPrinted/mongodb-user-login/blob/master/login_example.py """
 
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -96,12 +98,14 @@ def login():
         login_user = users.find_one({'username': request.form['username']})
 
         if login_user:
-            # If the username is in the database, hash the password entered in the form and compare it with the hashed password in the database for that user
+            """ If the username is in the database, hash the password entered in the form
+             and compare it with the hashed password in the database for that user"""
+
             if bcrypt.hashpw(request.form['password'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
                 session['username'] = request.form['username']
                 return redirect(url_for('all_recipes'))
 
-        # The user sees this message if the username and/or password are invalid
+        """ The user sees an invalid message """
         flash('Invalid username/password combination.')
 
     return render_template('login.html')
@@ -155,7 +159,7 @@ def delete_recipe(recipe_id):
 def add_recipe():
     """Load a form for logged-in users to add a new recipe to the database"""
 
-    # The if-else prevents users from submitting recipes when not logged in
+    """ Prevents users from submitting recipes when not logged in """
     if session:
         return render_template(
             'add_recipe.html', categories=mongo.db.categories.find(),
