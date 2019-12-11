@@ -162,9 +162,7 @@ def add_recipe():
     """ Prevents users from submitting recipes when not logged in """
     if session:
         return render_template(
-            'add_recipe.html', categories=mongo.db.categories.find(),
-            allergens=mongo.db.allergens.find().sort('allergen_name', 1),
-            restrictions=mongo.db.restrictions.find().sort('restriction_name', 1))
+            'add_recipe.html', categories=mongo.db.categories.find())
 
     else:
         return redirect(url_for('login'))
