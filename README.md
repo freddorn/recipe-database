@@ -73,7 +73,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ### Content and Media
 
-- The photos used for this site were obtained from [Pxhere](https://pxhere.com/en/)
+- The category image photos used for this site, were obtained from [Pxhere](https://pxhere.com/en/)
 - The recipes used to start the database were obtained from [Cookbooks.com](http://www.cookbooks.com/cookbooks-index.aspx)
 
 
