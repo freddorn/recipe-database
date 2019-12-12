@@ -1,8 +1,9 @@
-# Your Project's Name
+# Recipe Database
 
-One or two paragraphs providing an overview of your project.
+View website on [Heroku](https://https://recipe-data.herokuapp.com/all_recipes/)
 
-Essentially, this part is your sales pitch.
+A recipe database where viewers can search and view recipes. Users can also create an account, 
+where they can add, edit or delete their own recipes.
  
 ## UX
  
