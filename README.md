@@ -71,12 +71,17 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+### Content and Media
 
-### Media
-- The photos used in this site were obtained from ...
+- The photos used for this site were obtained from [Pxhere](https://pxhere.com/en/)
+- The recipes used to start the database were obtained from [Cookbooks.com](http://www.cookbooks.com/cookbooks-index.aspx)
+
+
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from [Cookbooks.com](http://www.cookbooks.com/cookbooks-index.aspx)
+- The Slack community, where I have learned a great deal, reading through many posts.
+- My mentor Sebastian Immel.
+- W3SCHOOLS website for easy explanation of the code.
+- Stack Overflow, a good source of knowledge.
