@@ -1,6 +1,6 @@
 # Recipe Database
 
-View website on [Heroku](https://https://recipe-data.herokuapp.com/)
+View website on [Heroku](https://recipe-data.herokuapp.com)
 
 A recipe database where viewers can search and view recipes. Users can also create an account, 
 where they can add, edit or delete their own recipes.
