@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Asset:100,200,300,400,500,600,700');
 
-/*--Font--*/
+/*--Font Styles--*/
 
 h1,
 h2,
@@ -18,7 +18,7 @@ p {
   font-size: 1rem;
 }
 
-/*--Font seetings for all HTML pages and backround image settings--*/
+/*--Backround image settings--*/
 
 html {
     font-family: "Roboto", sans-serif;
@@ -140,11 +140,6 @@ h3 {
     font-size: 3rem !important; 
     margin-left: 1rem;
     height: 100px;
-}
-
-.page-footer {
-    text-align: center;
-    background-color: #00583d;
 }
 
 
