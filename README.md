@@ -59,14 +59,29 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+To deploy the site to Heroku:
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+1. Create a new app app with the name recipe-data.
+2. Linked the recipe-data app to its Github repository.
+3. Verify that the project has an up to date Procfile and requirements.txt
+4. Push the project to the Heroku remote.
+5. Set the SECRET_KEY environmental variable in the Heroku config vars.
+6. Set the IP to 0.0.0.0 and the PORT to 5000 in the Heroku config vars.
+7. Set the MONGO_URI environmental variable in the Heroku config vars.
+8. Restart all dynos.
+9. Open the app on Heroku and check to ensure that it's working correctly.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+
+### Running the Code Locally
+
+1. Under the repository name on GitHub, click Clone or download.
+2. In the Clone with HTTPs section, click the icon beside the URL to copy the clone URL for the repository.
+3. Change the current working directory to the location where you want the cloned directory to be made.
+4. Type git clone, and then paste the URL you copied in Step 2.
+5. Press Enter. Your local clone will be created.
+6. Set up a virtual environment.
+7. Install the packages in requirements.txt by typing pip3 install -r requirements.txt in the CLI.
+8. Set the IP address to 127.0.0.1 and the PORT to 5000.
 
 
 ## Credits
