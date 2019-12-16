@@ -25,10 +25,28 @@ of the website.
 
 ## Features
  
-### Existing Features
+ ### Existing Features
 
+* A search field to search for recipes by keyword. It searches any word in the     database.
+* Search by recipe category on the categories page.
+* Register and login feature, that only allows users to add recipes when logged in
+  and prevents the editing or deleting of other user's recipes.
+* A form for users to add their own recipes, to the database.
+* The All Recipes page, that will show all the recipes, or just recipes that fit a
+  user's search criteria.
+* A View Recipe page that has information about each recipe, including ingredients
+  and preparation instructions.
+* The ability of users to edit or delete their own recipes.
+* A warning that is displayed, when the delete button is clicked, to alert the user
+  in case the button was pushed accidentally.
 
 ### Features Left to Implement
+
+* User email authentication, for a user to change their password.
+* A way for the administrator to have control of all entries and database content
+  without having to log into the Mongodb Atlas console.
+* Pagination so the number of recipe results doesn't become too long, as the
+  database grows.
 
 
 ## Technologies Used
