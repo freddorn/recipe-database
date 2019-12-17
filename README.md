@@ -100,6 +100,91 @@ Preparation | preparation | text | string
 
 ## Testing
 
+### Automated Tests
+
+Conducted automated testing of the app routes with unittests. The testing file is named testing.py in the root directory. Run the tests by entering ```python3 testing.py``` in the terminal.
+
+  
+### Manual Tests
+
+Performed manual tests of the application as follows:
+
+1. Cross-browser and Device Compatibility
+    1. Tested the app on Chrome, Edge, Firefox Opera and Safari browsers to verify   that it works on all of them.
+    2. Tested the app on a desktop, laptop, tablet and smartphone to verify that it works on all devices.
+
+2. Responsiveness
+    1. View the app in responsive mode with Chrome Developer Tools to check that the size and position of elements adjusts correctly.
+    2. View the app on a desktop, laptop, tablet and smartphone to verify that it displays correctly.
+
+3. Registration
+    1. Navigate to the registration page.
+    2. Enter a username and password.
+    3. Verify that I see text at the top of the page saying that am logged in under that username.
+    4. Verify that I can add recipes and edit and delete recipes submitted under that username, and that I can't edit or delete other users' recipes.
+    5. Verify that, when I click on the "Your Recipes" link in the navbar, that I see the list of that user's recipes and no others.
+    6. Click on the Logout link in the navbar and check that I'm logged out.
+    7. Enter a username that's already in the database.
+    8. Verify that a message appears saying that the username already exists.
+     
+4. Login
+    1. Navigate to the 'Login' page.
+    2. Enter a correct username and password.
+    3. Verify that I see text at the top of the page saying that am logged in under that username.
+    4. Verify that I can add, edit and delete recipes submitted under that username and that I can't edit or delete, other user's recipes.
+    5. Verify that when I click on the "Your Recipes" link in the navbar, I see the list of that user's recipes and no others.
+    6. Click on the Logout link in the navbar and check that I'm logged out.
+    7. Enter a username that's not in the database and a password.
+    8. Verify that I see a message saying that I've entered an incorrect username/password combination.
+    9. Enter a username that's in the database and an incorrect password.
+    10. Verify that I see a message saying that I've entered an incorrect username/password combination.
+
+5. Adding Recipes
+    1. Click on the "Add a Recipe" link in the navbar.
+    2. Verify that the form appears correctly.
+    3. Attempt to submit the form with required fields blank and check that I'm prompted to fill them.
+    4. Submit a fully completed form.
+    5. Click on the link to the new recipe in the list of recipes that appears.
+    6. Verify that the page showing that recipe loads correctly, with all entered details appearing.
+    7. Verify that all the recipe details have been saved in the database.
+
+6. Searching for Recipes
+    1. Enter various search terms in the search bar.
+    2. Verify that all recipes with those words, and only recipes with those words, are displayed in the results.
+    3. Click on each image on the 'Categories' page.
+    4. Verify that all recipes in that category, and only recipes in that category, are displayed in the results.
+    
+ 
+7. Viewing Recipes
+    1. Click on the 'Home' link in the navbar.
+    2. Verify that all recipes in the database are listed on the page that loads.
+    3. Click on each recipe in the list.
+    4. Verify that all the recipe details are displayed correctly on the 'View Recipe' page that loads.
+
+8. Editing Recipes
+    1. Click on the 'Edit' button at the bottom of a page displaying a recipe.
+    2. Verify that the form for editing the recipe loads.
+    3. Edit the recipe details.
+    4. Click the 'Submit' button.
+    5. Verify that the recipe reloads and the edits have been saved to the database.
+    6. Click on the 'Edit' button at the bottom of a page displaying a recipe.
+    7. Verify that the form for editing the recipe loads.
+    8. Edit the recipe details.
+    8. Click the 'Cancel' button.
+    9. Verify that the recipe reloads, with none of the cancelled changes saved to the database.
+    10. Repeat for all recipes.
+
+9. Deleting Recipes
+    1. Click the 'Delete' button at the bottom of the recipe display page.
+    2. Verify that a warning message appears, along with buttons to cancel or confirm the deletion.
+    3. Click 'Cancel'.
+    4. Verify that the page reloads correctly.
+    5. Click the 'Delete' button again.
+    5. Click 'Confirm'.
+    6. Verify that the recipe is deleted from the database.
+    7. Repeat for all recipes.
+
+
 
 #### Testing Tools:
 
