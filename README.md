@@ -82,9 +82,9 @@ Preparation | preparation | text | string
 ### Tools
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database for this    	project
 - [GitHub](https://github.com/) to store and share all project code remotely.
-- [Materialize](https://materializecss.com//)** was used as the basis for the 	site's design and responsiveness.
+- [Materialize](https://materializecss.com//) Was used as the basis for the site's design and responsiveness.
 
--  [Heroku](https://www.heroku.com/)** was used to deploy the project.
+-  [Heroku](https://www.heroku.com/) Was used to deploy the project.
 -  [unittest](https://docs.python.org/2/library/unittest.html)** was used for automated testing of the Python code.
 
  
