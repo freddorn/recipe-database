@@ -74,6 +74,29 @@ Preparation | preparation | text | string
 
 ## Technologies Used
 
+### Languages
+* HTML 
+* CSS 
+* Javascript
+* Python
+### Tools
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database for this    	project
+- [GitHub](https://github.com/) to store and share all project code remotely.
+- [Materialize](https://materializecss.com//)** was used as the basis for the 	site's design and responsiveness.
+
+-  [Heroku](https://www.heroku.com/)** was used to deploy the project.
+-  [unittest](https://docs.python.org/2/library/unittest.html)** was used for automated testing of the Python code.
+
+ 
+
+### Libraries
+- [JQuery](https://jquery.com) to simplify DOM manipulation.
+- [Google Fonts](https://fonts.google.com/) To style the website fonts.
+- [PyMongo](https://api.mongodb.com/python/current/) To make communication between 	Python and MongoDB possible.
+- [Flask](https://flask.palletsprojects.com/en/1.0.x/) To construct and render 	pages.
+- [Jinja](http://jinja.pocoo.org/docs/2.10/) For simplify displaying data from the 	backend of this project smoothly and effectively in html.
+
+
 
 
 
