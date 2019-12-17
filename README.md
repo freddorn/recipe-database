@@ -50,14 +50,17 @@ of the website.
 
 ### Database Structure
 
-####Users Collection
+
+
 
 | Title | Key in db | form type | Data type |
 --- | --- | --- | --- 
 Account ID | _id | None | ObjectId 
 Name | username | text | string
 Password | password | text | string
-####Recipe Collection
+
+
+
 | Title | Key in db | form type | Data type |
 --- | --- | --- | --- 
 Recipe ID | _id | None | ObjectId 
