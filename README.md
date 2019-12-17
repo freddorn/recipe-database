@@ -98,9 +98,22 @@ Preparation | preparation | text | string
 
 
 
-
-
 ## Testing
+
+
+#### Testing Tools:
+
+* [W3C CSS validation](https://jigsaw.w3.org/css-validator/)
+    - To check the the validity of the CSS code. 
+    
+* [W3C Markup Validation]( https://validator.w3.org/)
+    - To check the the validity of the HTML code.
+
+#### Bugs Fixed
+
+1. When on the Categories page and choosing Main Dishes, not all recipes would
+    be found in the search. Found that in the database, some entries had Main dishes
+    vs Main Dishes.
 
 
 
