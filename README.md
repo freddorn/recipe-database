@@ -48,6 +48,26 @@ of the website.
 * Pagination so the number of recipe results doesn't become too long, as the
   database grows.
 
+### Database Structure
+
+####Users Collection
+
+| Title | Key in db | form type | Data type |
+--- | --- | --- | --- 
+Account ID | _id | None | ObjectId 
+Name | username | text | string
+Password | password | text | string
+####Recipe Collection
+| Title | Key in db | form type | Data type |
+--- | --- | --- | --- 
+Recipe ID | _id | None | ObjectId 
+Username | username |text | string
+Category Name | category_name | text | string
+Recipe Name | recipe-name | text | string
+Ingredients | ingredients | text | string
+Preparation | preparation | text | string
+
+
 
 ## Technologies Used
 
