@@ -54,13 +54,17 @@ nav {
 }
 
 ::placeholder {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #ffffff;
     padding-left: 0.5rem;
 }
 
 #search {
     vertical-align: middle;
+}
+
+.search-wrapper {
+    background-color: #00583d
 }
 
 .input-field {
