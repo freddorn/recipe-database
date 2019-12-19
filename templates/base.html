@@ -52,7 +52,6 @@
 					<form action="{{ url_for('search')}}" method="POST">
 						<div class="input-field">
 							<input id="search" name="search" placeholder="Search by keyword" required>
-							<label class="label-icon" for="search">
 						</div>
 					</form>
 				</div>
@@ -60,15 +59,15 @@
 		</div>
 	</header>
 	<div class="container">
-        <!--If the user is logged in, they see their username at the top of each page-->
-        {% if session.username %}
-            <p id="login-text">Logged in as {{ session.username }}</p>
-        {% else %}
-            <p id="login-text">Please log in or register to add,<br>
+		<!--If the user is logged in, they see their username at the top of each page-->
+		{% if session.username %}
+		<p id="login-text">Logged in as {{ session.username }}</p>
+		{% else %}
+		<p id="login-text">Please log in or register to add,<br>
                                 edit and delete your own recipes.</p>
-        {% endif %} 
-            
-		{% block content %} {% endblock %}
+			{% endif %}
+
+			{% block content %} {% endblock %}
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

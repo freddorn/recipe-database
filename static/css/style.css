@@ -49,22 +49,22 @@ nav {
     background-color: #00583d;
 }
 
-.search-wrapper {
-    background-color: #00583d;
+.label-icon {
+    margin-left: 10px;
+}
+
+::placeholder {
+    font-size: 1.25rem;
+    color: #ffffff;
+    padding-left: 0.5rem;
 }
 
 #search {
     vertical-align: middle;
 }
 
-.label-icon {
-    margin-left: 10px;
-}
-
-::placeholder {
-    font-size: 1rem;
-    color: #ffffff;
-    padding-left: 0.5rem;
+.input-field {
+    color: #FFFFFF;
 }
 
 .navbar-fixed { 
@@ -137,9 +137,8 @@ h3 {
 
 .brand-logo {
     font-family: "Asset", cursive;
-    font-size: 3rem !important; 
+    font-size: 2rem !important; 
     margin-left: 1rem;
-    height: 100px;
 }
 
 
