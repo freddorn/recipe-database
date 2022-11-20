@@ -45,7 +45,7 @@ pbr==5.4.3
 pep8==1.7.1
 pexpect==4.7.0
 pickleshare==0.7.5
-pipenv==2021.5.29
+pipenv==2022.1.8
 pluggy==0.13.0
 prometheus-client==0.7.1
 prompt-toolkit==1.0.18
